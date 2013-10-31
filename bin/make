@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Delete and reinstall Drupal
+rm -rf drupal
+drush make make/bootdrop.make drupal
+echo "Drupal installation created at drupal directory."
+
+# Delete profiles and create link to Bootdrop Profile
+#rm -rf drupal/profiles/*
+ln -s ../../profile drupal/profiles/bootdrop
+
+# Create links for settings and files
+cp shared/default.settings.local.php shared/settings.local.php
+ln -s ../../../shared/settings.php drupal/sites/default/settings.php
+ln -s ../../../shared/settings.local.php drupal/sites/default/settings.local.php
+ln -s ../../../shared/files drupal/sites/default/files
+echo "Edit shared/settings.local.php with your local database configuration."
