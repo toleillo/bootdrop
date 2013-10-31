@@ -1,0 +1,5 @@
+drupal/
+shared/files/*
+shared/settings.local.php
+*.DS_Store
+.idea/
