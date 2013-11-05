@@ -13,5 +13,7 @@ ln -s ../../profile drupal/profiles/bootdrop
 cp shared/default.settings.local.php shared/settings.local.php
 ln -s ../../../shared/settings.php drupal/sites/default/settings.php
 ln -s ../../../shared/settings.local.php drupal/sites/default/settings.local.php
+mkdir shared/files
+chmod 777 shared/files
 ln -s ../../../shared/files drupal/sites/default/files
 echo "Edit shared/settings.local.php with your local database configuration."
