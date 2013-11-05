@@ -1,0 +1,5 @@
+cd drupal
+drush site-install -y --account-name=admin --account-pass=password bootdrop
+drush fra -y
+drush cc all
+cd -
