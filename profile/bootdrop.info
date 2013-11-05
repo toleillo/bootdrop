@@ -38,6 +38,9 @@ dependencies[] = entity
 dependencies[] = rules
 dependencies[] = nodequeue
 
+; Features
+dependencies[] = bootdrop_images
+
 ;
 ; Users
 ;
