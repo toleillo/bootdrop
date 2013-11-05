@@ -1,6 +1,7 @@
 Bootdrop
 ========
-Bootdrop contains a Drupal profile and scripts to start developing common Drupal 7 projects
+Bootdrop contains a Drupal profile and scripts using drush to start developing common Drupal 7 projects.nnn
+
 
 Preconfiguration
 ----------------
@@ -12,5 +13,9 @@ Installation
 1. $ bin/make
 2. Edit shared/settings.local.php with your local database configuration.
 3. $ bin/install
-4. Create a virtual directory pointing to drupal folder.
-5. You can visit your site and go to /user/login entering "admin" and "password".
+
+Post-installation
+-----------------
+1. Adjust permissions on drupal and shared folders.
+2. Create a virtual directory pointing to drupal folder.
+3. You can visit your site and go to /user/login entering "admin" and "password".
