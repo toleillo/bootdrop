@@ -1,20 +1,15 @@
 <?php
 /**
  * @file
- * Main installation logic for this profile.
+ * Install, update and uninstall functions for the this installation profile.
  */
-
-/**
- * Implements hook_install_tasks_alter().
- */
-function bootdrop_install_tasks_alter(&$tasks) {
-  $tasks['bootdrop_install_profile_complete'] = array();
-}
 
 /**
  * Implements hook_install().
  *
- * Perform actions to set up the site for this profile.
+ * Performs actions to set up the site for this profile.
+ *
+ * @see system_install()
  */
 function bootdrop_install() {
   // Enable the admin theme.
@@ -67,6 +62,13 @@ function bootdrop_install() {
       ->fields(array_combine($fields, $block));
     $query->execute();
   }
+}
+
+/**
+ * Implements hook_install_tasks_alter().
+ */
+function bootdrop_install_tasks_alter(&$tasks) {
+  $tasks['bootdrop_install_profile_complete'] = array();
 }
 
 /**

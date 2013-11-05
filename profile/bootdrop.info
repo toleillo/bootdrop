@@ -1,15 +1,14 @@
 name = Bootdrop
-distribution_name = bootdrop
+distribution_name = Bootdrop
 description = Bootdrop Profile
+version = VERSION
 core = 7.x
-theme = bartik
 
 ; Core
 dependencies[] = block
 dependencies[] = contextual
 dependencies[] = dashboard
 dependencies[] = dblog
-dependencies[] = entitycache
 dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = help
