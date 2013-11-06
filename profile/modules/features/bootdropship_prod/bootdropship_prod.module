@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Bootdropship Production feature.
+ */
+
+include_once 'bootdropship_prod.features.inc';

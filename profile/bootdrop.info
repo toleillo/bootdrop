@@ -38,5 +38,9 @@ dependencies[] = entity
 dependencies[] = rules
 dependencies[] = nodequeue
 
-; Features
+; Environment theme features
+;dependencies[] = bootdropship_prod
+dependencies[] = bootdropship_dev
+
+; Extra features
 dependencies[] = bootdrop_images

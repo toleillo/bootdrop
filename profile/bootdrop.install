@@ -12,15 +12,8 @@
  * @see system_install()
  */
 function bootdrop_install() {
-  // Enable the admin theme.
-  db_update('system')
-    ->fields(array('status' => 1))
-    ->condition('type', 'theme')
-    ->condition('name', 'seven')
-    ->execute();
-
   // Enable themes.
-  $theme_name = 'mothership';
+  $theme_name = 'bootdropship';
   $admin_theme = 'seven';
   theme_enable(array($admin_theme, $theme_name));
   // Set default theme.
