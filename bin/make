@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # Delete and reinstall Drupal
-rm -rf drupal
+if [[ -e drupal ]]; then
+  chmod u+w -R drupal
+  rm -rf drupal
+fi
 drush make make/bootdrop.make drupal
 echo "Drupal installation created at drupal directory."
 
@@ -10,10 +13,14 @@ echo "Drupal installation created at drupal directory."
 ln -s ../../profile drupal/profiles/bootdrop
 
 # Create links for settings and files
-cp shared/default.settings.local.php shared/settings.local.php
+if [[ ! -e shared/settings.local.php ]]; then
+  cp shared/default.settings.local.php shared/settings.local.php
+  echo "Edit shared/settings.local.php with your local database configuration."
+fi
 ln -s ../../../shared/settings.php drupal/sites/default/settings.php
 ln -s ../../../shared/settings.local.php drupal/sites/default/settings.local.php
-mkdir shared/files
-chmod 777 shared/files
+if [[ ! -e shared/files ]]; then
+  mkdir shared/files
+  chmod 777 shared/files
+fi
 ln -s ../../../shared/files drupal/sites/default/files
-echo "Edit shared/settings.local.php with your local database configuration."
