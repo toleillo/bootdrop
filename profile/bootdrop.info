@@ -3,6 +3,7 @@ distribution_name = Bootdrop
 description = Bootdrop Profile
 version = VERSION
 core = 7.x
+theme = mothership
 
 ; Core
 dependencies[] = block
@@ -39,7 +40,7 @@ dependencies[] = rules
 dependencies[] = nodequeue
 
 ; Features
-dependencies[] = bootdrop_images
+;dependencies[] = bootdrop_images
 
 ;
 ; Users
