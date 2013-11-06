@@ -1,5 +1,6 @@
 drupal/
 shared/files/*
+shared/settings.php
 shared/settings.local.php
 *.DS_Store
 .idea/

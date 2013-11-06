@@ -13,6 +13,10 @@ echo "Drupal installation created at drupal directory."
 ln -s ../../profile drupal/profiles/bootdrop
 
 # Create links for settings and files
+if [[ -e shared/settings.php ]]; then
+  rm shared/settings.php
+fi
+cp shared/default.settings.php shared/settings.php
 if [[ ! -e shared/settings.local.php ]]; then
   cp shared/default.settings.local.php shared/settings.local.php
   echo "Edit shared/settings.local.php with your local database configuration."
