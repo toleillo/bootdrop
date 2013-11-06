@@ -2,7 +2,7 @@
 
 # Delete and reinstall Drupal
 if [[ -e drupal ]]; then
-  chmod u+w -R drupal
+  chmod u+w,g+w -R drupal
   rm -rf drupal
 fi
 drush make make/bootdrop.make drupal
@@ -14,6 +14,7 @@ ln -s ../../profile drupal/profiles/bootdrop
 
 # Create links for settings and files
 if [[ -e shared/settings.php ]]; then
+  chmod u+w,g+w shared/settings.php
   rm shared/settings.php
 fi
 cp shared/default.settings.php shared/settings.php

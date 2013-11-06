@@ -26,7 +26,7 @@ includes[base] = "base.make"
 includes[theming] = "theming.make"
 
 ; Images
-;includes[images] = "images.make"
+includes[images] = "images.make"
 
 ; Multilingual
 ;includes[i18n] = "i18n.make"

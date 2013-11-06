@@ -1,4 +1,4 @@
-chmod u+w shared/settings.php
+chmod u+w,g+w shared/settings.php
 cd drupal
 drush site-install -y --account-name=admin --account-pass=password bootdrop
 cd -

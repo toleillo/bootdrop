@@ -19,82 +19,14 @@ function bootdrop_install() {
     ->condition('name', 'seven')
     ->execute();
 
-  // Set theme.
-  $theme_name = 'bartik';
+  // Enable themes.
+  $theme_name = 'mothership';
+  $admin_theme = 'seven';
+  theme_enable(array($admin_theme, $theme_name));
+  // Set default theme.
   variable_set('theme_default', $theme_name);
-  theme_enable(array($theme_name));
-
-  // Place the content block.
-  $blocks = array(
-    array(
-      'module' => 'system',
-      'delta' => 'main',
-      'theme' => $theme_name,
-      'status' => 1,
-      'weight' => 0,
-      'region' => 'content',
-      'pages' => '',
-      'cache' => -1,
-      'title' => '<none>',
-    ),
-  );
-  $fields = array(
-    'module',
-    'delta',
-    'theme',
-    'status',
-    'weight',
-    'region',
-    'pages',
-    'cache',
-    'title',
-  );
-  // Perform merge query since block table may already be populated.
-  foreach ($blocks as $block) {
-    $query = db_merge('block')
-      ->key(
-        array(
-          'module' => $block['module'],
-          'delta' => $block['delta'],
-          'theme' => $block['theme'],
-        )
-      )
-      ->fields(array_combine($fields, $block));
-    $query->execute();
-  }
-}
-
-/**
- * Implements hook_install_tasks_alter().
- */
-function bootdrop_install_tasks_alter(&$tasks) {
-  $tasks['bootdrop_install_profile_complete'] = array();
-}
-
-/**
- * Tasks to run at the end of the installation process.
- */
-function bootdrop_install_profile_complete() {
-}
-
-/**
- * Set us as the default install profile, remove defaults.
- */
-function system_form_install_select_profile_form_alter(&$form, $form_state) {
-  unset($form['profile']['Minimal'], $form['profile']['Standard']);
-  foreach ($form['profile'] as $key => $element) {
-    $form['profile'][$key]['#value'] = 'bootdrop';
-  }
-}
-
-/**
- * Implements of hook_form_FORM_ID_alter().
- *
- * Set defaults on "Configure site" form during installation.
- */
-function bootdrop_form_install_configure_form_alter(&$form, $form_state) {
-  $server_name = $_SERVER['SERVER_NAME'];
-
-  // Pre-populate the site name with the server name.
-  $form['site_information']['site_name']['#default_value'] = $server_name;
+  // Set administration theme.
+  variable_set('admin_theme', $admin_theme);
+  // Use the administration theme when editing or creating content.
+  variable_set('node_admin_theme', 1);
 }
