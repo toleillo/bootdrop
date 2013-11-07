@@ -7,7 +7,7 @@ Bootdrop builds a new Drupal 7 installation at a "drupal" folder, links the drup
 Preconfiguration
 ----------------
 1. Edit profile/bootdrop.make and comment or uncomment to include extra sets of modules.
-2. Edit profile/bootdrop.info and comment or uncomment to enable the corresponding extra features.
+2. Edit profile/bootdrop.info and/or profile/modules/features/feature_controller.info to enable extra sets of modules.
 
 Installation
 ------------
