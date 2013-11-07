@@ -1,6 +1,8 @@
 Bootdrop
 ========
-Bootdrop contains a Drupal profile and scripts using drush to start developing common Drupal 7 projects.nnn
+Bootdrop contains a Drupal profile and scripts using drush to start developing common Drupal 7 projects.
+
+Bootdrop builds a new Drupal 7 installation at a "drupal" folder, links the drupal/sites/default/files to the "shared" folder, and links drupal/profiles/bootdrop to the "profile" folder. Then you can configure and install it from the Bootdrop profile and start developing, adding or updating modules or features when needed.
 
 Preconfiguration
 ----------------

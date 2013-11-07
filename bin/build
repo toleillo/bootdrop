@@ -19,10 +19,11 @@ if [[ ! -e shared/settings.local.php ]]; then
 fi
 ln -s ../../../shared/settings.php drupal/sites/default/settings.php
 ln -s ../../../shared/settings.local.php drupal/sites/default/settings.local.php
-if [[ ! -e shared/files ]]; then
-  mkdir shared/files
-  chmod 777 shared/files
+if [[ -e shared/files ]]; then
+  rm -rf shared/files
 fi
+mkdir shared/files
+chmod 777 shared/files
 ln -s ../../../shared/files drupal/sites/default/files
 
 echo "Building Bootdrop profile..."
