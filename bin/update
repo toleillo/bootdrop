@@ -1,0 +1,10 @@
+#!/bin/bash
+
+rm -rf profile/modules/contrib
+rm -rf profile/themes/contrib
+cd drupal
+drush make --working-copy --no-core --contrib-destination=profiles/bootdrop -y profiles/bootdrop/bootdrop.make
+drush fra -y
+drush updatedb -y
+drush cc all
+cd -

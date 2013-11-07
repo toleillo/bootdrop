@@ -554,3 +554,5 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
 
 // Require a local settings file.
 require dirname(__FILE__) . '/settings.local.php';
+
+$conf['install_profile'] = 'bootdrop';

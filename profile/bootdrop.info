@@ -1,6 +1,6 @@
 name = Bootdrop
 distribution_name = Bootdrop
-description = Bootdrop Profile
+description = Bootdrop Profile.
 version = VERSION
 core = 7.x
 
@@ -42,5 +42,5 @@ dependencies[] = nodequeue
 ;dependencies[] = bootdropship_prod
 dependencies[] = bootdropship_dev
 
-; Extra features
-dependencies[] = bootdrop_images
+; Features
+dependencies[] = feature_controller

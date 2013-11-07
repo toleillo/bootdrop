@@ -1,4 +1,13 @@
-chmod u+w,g+w shared/settings.php
+#!/bin/bash
+
+# Avoid modification of settings.php by copying it for later restoring
+cp shared/settings.php shared/original.settings.php
+
+# Install site with drush, using the Bootdrop profile
 cd drupal
 drush site-install -y --account-name=admin --account-pass=password bootdrop
 cd -
+
+# Restore settings.php discarding drush modifications
+rm -rf shared/settings.php
+mv shared/original.settings.php shared/settings.php

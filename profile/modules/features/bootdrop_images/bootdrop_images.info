@@ -1,5 +1,5 @@
 name = Bootdrop Images
-description = Module dependencies and configuration for image handling
+description = Module dependencies and configuration for image handling.
 core = 7.x
 package = Bootdrop Features
 version = 7.x-1.0-dev

@@ -1,0 +1,8 @@
+name = Feature Controller
+description = One feature to rule them all
+core = 7.x
+package = Global Features
+version = 7.x-1.0-dev
+project = feature_controller
+dependencies[] = bootdrop_images
+features[features_api][] = api:2

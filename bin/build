@@ -1,23 +1,18 @@
 #!/bin/bash
 
-# Delete and reinstall Drupal
+# Delete and download Drupal
 if [[ -e drupal ]]; then
   chmod u+w,g+w -R drupal
   rm -rf drupal
 fi
-drush make make/bootdrop.make drupal
-echo "Drupal installation created at drupal directory."
+echo "Building Drupal..."
+drush make profile/bootdrop-core.make drupal
 
 # Delete profiles and create link to Bootdrop Profile
 #rm -rf drupal/profiles/*
 ln -s ../../profile drupal/profiles/bootdrop
 
 # Create links for settings and files
-if [[ -e shared/settings.php ]]; then
-  chmod u+w,g+w shared/settings.php
-  rm shared/settings.php
-fi
-cp shared/default.settings.php shared/settings.php
 if [[ ! -e shared/settings.local.php ]]; then
   cp shared/default.settings.local.php shared/settings.local.php
   echo "Edit shared/settings.local.php with your local database configuration."
@@ -29,3 +24,10 @@ if [[ ! -e shared/files ]]; then
   chmod 777 shared/files
 fi
 ln -s ../../../shared/files drupal/sites/default/files
+
+echo "Building Bootdrop profile..."
+rm -rf profile/modules/contrib
+rm -rf profile/themes/contrib
+cd drupal
+drush make --working-copy --no-core --contrib-destination=profiles/bootdrop -y profiles/bootdrop/bootdrop.make
+cd -

@@ -1,0 +1,9 @@
+name = Bootdrop Commerce
+description = Module dependencies and configuration for commerce handling.
+core = 7.x
+package = Bootdrop Features
+version = 7.x-1.0-dev
+project = bootdrop_commerce
+dependencies[] = commerce
+dependencies[] = commerce_product
+features[features_api][] = api:2
