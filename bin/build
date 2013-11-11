@@ -6,11 +6,11 @@ if [[ -e drupal ]]; then
   rm -rf drupal
 fi
 echo "Building Drupal..."
-drush make profile/bootdrop-core.make drupal
+drush make bootdrop_profile/bootdrop-core.make drupal
 
 # Delete profiles and create link to Bootdrop Profile
-#rm -rf drupal/profiles/*
-ln -s ../../profile drupal/profiles/bootdrop
+rm -rf drupal/profiles/*
+ln -s ../../bootdrop_profile drupal/profiles/bootdrop
 
 # Create links for settings and files
 if [[ ! -e shared/settings.local.php ]]; then
@@ -26,9 +26,14 @@ mkdir shared/files
 chmod 777 shared/files
 ln -s ../../../shared/files drupal/sites/default/files
 
+# Link development feature
+if [[ ! -e bootdrop_profile/modules/features/bootdrop_development ]]; then
+   ln -s ../../../bootdrop_features/bootdrop_development bootdrop_profile/modules/features/bootdrop_development
+fi
+
 echo "Building Bootdrop profile..."
-rm -rf profile/modules/contrib
-rm -rf profile/themes/contrib
+rm -rf bootdrop_profile/modules/contrib
+rm -rf bootdrop_profile/themes/contrib
 cd drupal
 drush make --working-copy --no-core --contrib-destination=profiles/bootdrop -y profiles/bootdrop/bootdrop.make
 cd -

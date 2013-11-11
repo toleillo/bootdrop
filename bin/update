@@ -1,7 +1,7 @@
 #!/bin/bash
 
-rm -rf profile/modules/contrib
-rm -rf profile/themes/contrib
+rm -rf bootdrop_profile/modules/contrib
+rm -rf bootdrop_profile/themes/contrib
 cd drupal
 drush make --working-copy --no-core --contrib-destination=profiles/bootdrop -y profiles/bootdrop/bootdrop.make
 drush fra -y

@@ -1,5 +1,3 @@
-; Commerce modules
-
 ; Drupal Commerce
 -----------------
 projects[commerce][version] = 1.8

@@ -1,5 +1,3 @@
-; Development modules
-
 ; Diff
 projects[diff][version] = 3.2
 projects[diff][type] = "module"

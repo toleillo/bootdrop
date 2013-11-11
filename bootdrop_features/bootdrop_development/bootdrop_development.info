@@ -1,0 +1,12 @@
+name = Bootdrop Development
+description = Module dependencies and configuration for development.
+core = 7.x
+package = Bootdrop Features
+version = 7.x-1.0-dev
+project = bootdrop_development
+dependencies[] = diff
+dependencies[] = devel
+dependencies[] = views_ui
+dependencies[] = context_ui
+dependencies[] = rules_admin
+features[features_api][] = api:2

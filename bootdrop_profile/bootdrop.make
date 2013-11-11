@@ -1,7 +1,14 @@
-; Base modules for every common drupal project
+; Core version
+core = 7.x
 
-; Modules
-; --------
+; Drush Make API version
+api = 2
+
+; Set contrib directory.
+defaults[projects][subdir] = "contrib"
+
+; Base modules for every common drupal project
+; --------------------------------------------
 ; Chaos tool suite (ctools)
 projects[ctools][version] = 1.3
 projects[ctools][type] = "module"
@@ -41,3 +48,15 @@ projects[rules][type] = "module"
 ; Nodequeue
 projects[nodequeue][version] = 2.0-beta1
 projects[nodequeue][type] = "module"
+
+
+; Themes and theming modules and libraries
+; ----------------------------------------
+; Mothership
+projects[mothership][version] = 2.10
+projects[mothership][type] = "theme"
+
+
+; Features
+; --------
+includes[features] = "modules/features/features.make"
