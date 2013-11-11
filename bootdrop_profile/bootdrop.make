@@ -7,6 +7,10 @@ api = 2
 ; Set contrib directory.
 defaults[projects][subdir] = "contrib"
 
+; Include auto-generated features.make
+; ------------------------------------
+includes[features] = "features.make"
+
 ; Base modules for every common drupal project
 ; --------------------------------------------
 ; Chaos tool suite (ctools)
@@ -55,8 +59,3 @@ projects[nodequeue][type] = "module"
 ; Mothership
 projects[mothership][version] = 2.10
 projects[mothership][type] = "theme"
-
-
-; Features
-; --------
-includes[features] = "modules/features/features.make"

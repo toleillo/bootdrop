@@ -31,9 +31,4 @@ if [[ ! -e bootdrop_profile/modules/features/bootdrop_development ]]; then
    ln -s ../../../bootdrop_features/bootdrop_development bootdrop_profile/modules/features/bootdrop_development
 fi
 
-echo "Building Bootdrop profile..."
-rm -rf bootdrop_profile/modules/contrib
-rm -rf bootdrop_profile/themes/contrib
-cd drupal
-drush make --working-copy --no-core --contrib-destination=profiles/bootdrop -y profiles/bootdrop/bootdrop.make
-cd -
+bin/build_profile

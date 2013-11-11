@@ -4,10 +4,11 @@ Bootdrop contains a Drupal profile and scripts using drush to start developing c
 
 Bootdrop builds a new Drupal 7 installation at a "drupal" folder, links the drupal/sites/default/files to the "shared" folder, and links drupal/profiles/bootdrop to the "profile" folder. Then you can configure and install it from the Bootdrop profile and start developing, adding or updating modules or features when needed.
 
-Preconfiguration
+Configuration
 ----------------
 1. Edit profile/bootdrop.make and comment or uncomment to include extra sets of modules.
-2. Edit profile/bootdrop.info and/or profile/modules/features/feature_controller.info to enable extra sets of modules.
+2. In modules/features link the bootdrop_features you need or copy them for customization changing the feature name to feature_foo instead of bootdrop_foo.
+3. Edit profile/bootdrop.info and/or profile/modules/features/feature_controller.info to enable extra sets of modules.
 
 Installation
 ------------
@@ -31,7 +32,7 @@ Post-installation
 
 Updating
 --------
-To add or update a module, theme, etc., you just need to modify the corresponding .make file. If your are adding a module, you should include it as a dependency into a feature, and that feature should be also included in the Feature Controller. Then execute the following command to install or update them.
+To add or update a module, theme, etc., you just need to modify the corresponding .make file. If your are adding a module, you should include it as a dependency into a feature (with a *feature_name*.make file), and that feature should be also included in the Feature Controller. Then execute the following command to install or update them.
 ```bash
 bin/update
 ```

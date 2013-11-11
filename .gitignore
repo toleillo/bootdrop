@@ -1,6 +1,7 @@
 drupal/
 bootdrop_profile/modules/contrib/*
 bootdrop_profile/themes/contrib/*
+bootdrop_profile/features.make
 bootdrop_profile/modules/features/bootdrop_*
 shared/files/*
 shared/settings.local.php
