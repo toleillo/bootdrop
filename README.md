@@ -45,3 +45,8 @@ bin/update
 This will rebuild the profile, revert the features so dependencies can be installed, update the database and clear all caches.
 
 If you want to remove some module, you will need to disable and uninstall it first, then edit the .make file and finally run the `bin/update` command to delete the folder (or manually remove it).
+
+There are some features that only should be enabled either in development or in production environments. The install and update scripts enable development features by default (internally excutes `bin/enable-dev`), but you can also update enabling the production features:
+```bash
+bin/update-prod
+```
