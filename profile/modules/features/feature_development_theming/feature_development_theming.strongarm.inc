@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * feature_theming_production.strongarm.inc
+ * feature_development_theming.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function feature_theming_production_strongarm() {
+function feature_development_theming_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
@@ -28,12 +28,12 @@ function feature_theming_production_strongarm() {
     'default_favicon' => 1,
     'favicon_path' => '',
     'favicon_upload' => '',
-    'mothership_poorthemers_helper' => 0,
-    'mothership_rebuild_registry' => 0,
-    'mothership_test' => 0,
-    'mothership_mediaquery_indicator' => 0,
+    'mothership_poorthemers_helper' => 1,
+    'mothership_rebuild_registry' => 1,
+    'mothership_test' => 1,
+    'mothership_mediaquery_indicator' => 1,
     'mothership_script_place_footer' => 1,
-    'mothership_js_onefile' => 1,
+    'mothership_js_onefile' => 0,
     'mothership_js_jquery_latest' => 0,
     'mothership_js_jquerycdn' => 0,
     'mothership_js_jquerycdn_version' => '0',
@@ -44,7 +44,7 @@ function feature_theming_production_strongarm() {
     'mothership_js_nuke_module_contrib' => 0,
     'mothership_js_nuke_misc' => 0,
     'mothership_js_freeform' => '',
-    'mothership_css_onefile' => 1,
+    'mothership_css_onefile' => 0,
     'mothership_css_reset' => 1,
     'mothership_css_reset_html5' => 1,
     'mothership_css_normalize' => 1,

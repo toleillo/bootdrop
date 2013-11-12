@@ -1,9 +1,9 @@
-name = Feature Theming Development
-description = Theme configuration for a development environment
+name = Feature Production Theming
+description = Theme configuration for a production environment
 core = 7.x
-package = Theming Features
+package = Production Features
 version = 7.x-1.0-dev
-project = feature_theming_development
+project = feature_production_theming
 dependencies[] = ctools
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1

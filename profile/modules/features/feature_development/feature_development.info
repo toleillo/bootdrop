@@ -1,7 +1,7 @@
 name = Feature Development
 description = Module dependencies and configuration for development.
 core = 7.x
-package = Base Features
+package = Development Features
 version = 7.x-1.0-dev
 project = feature_development
 dependencies[] = diff
@@ -9,4 +9,5 @@ dependencies[] = devel
 dependencies[] = views_ui
 dependencies[] = context_ui
 dependencies[] = rules_admin
+dependencies[] = feature_development_theming
 features[features_api][] = api:2

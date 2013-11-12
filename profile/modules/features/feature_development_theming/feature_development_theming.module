@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Feature Development Theming feature.
+ */
+
+include_once 'feature_development_theming.features.inc';

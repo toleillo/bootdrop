@@ -11,3 +11,5 @@ cd -
 # Restore settings.php discarding drush modifications
 rm -rf shared/settings.php
 mv shared/original.settings.php shared/settings.php
+
+bin/enable-dev

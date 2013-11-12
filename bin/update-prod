@@ -2,4 +2,4 @@
 
 bin/build-profile
 
-bin/enable-dev
+bin/enable-prod

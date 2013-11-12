@@ -1,0 +1,8 @@
+name = Feature Production
+description = Module dependencies and configuration for a production environment.
+core = 7.x
+package = Production Features
+version = 7.x-1.0-dev
+project = feature_production
+dependencies[] = feature_production_theming
+features[features_api][] = api:2

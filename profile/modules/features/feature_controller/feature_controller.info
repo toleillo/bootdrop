@@ -4,8 +4,4 @@ core = 7.x
 package = Global Features
 version = 7.x-1.0-dev
 project = feature_controller
-; Environment theme features
-;dependencies[] = feature_theming_production
-dependencies[] = feature_theming_development
-dependencies[] = feature_development
 features[features_api][] = api:2

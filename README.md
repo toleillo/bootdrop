@@ -25,8 +25,10 @@ Installation
 
 Alternatively if you have already created and configured shared/settings.local.php you can just execute:
    ```bash
-   bin/build_install
+   bin/build-install
    ```
+
+These scripts must be executed always from the root project folder, using 'bin/' followed by the script name.
 
 Post-installation
 -----------------

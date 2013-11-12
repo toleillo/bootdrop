@@ -26,4 +26,4 @@ mkdir shared/files
 chmod 777 shared/files
 ln -s ../../../shared/files drupal/sites/default/files
 
-bin/build_profile
+bin/build-profile
