@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * bootdropship_dev.strongarm.inc
+ * feature_theming_development.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function bootdropship_dev_strongarm() {
+function feature_theming_development_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();

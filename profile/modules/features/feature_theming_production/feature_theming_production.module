@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Feature Theming Production feature.
+ */
+
+include_once 'feature_theming_production.features.inc';

@@ -1,9 +1,9 @@
-name = Bootdropship Development
-description = Bootdropship theme configuration for a development environment
+name = Feature Theming Development
+description = Theme configuration for a development environment
 core = 7.x
-package = Bootdropship Features
+package = Theming Features
 version = 7.x-1.0-dev
-project = bootdropship_dev
+project = feature_theming_development
 dependencies[] = ctools
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1

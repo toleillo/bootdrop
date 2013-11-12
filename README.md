@@ -23,6 +23,11 @@ Installation
    bin/install
    ```
 
+Alternatively if you have already created and configured shared/settings.local.php you can just execute:
+   ```bash
+   bin/build_install
+   ```
+
 Post-installation
 -----------------
 1. Adjust permissions on drupal and shared folders.
