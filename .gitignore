@@ -1,6 +1,6 @@
 drupal/
-bootdrop_profile/modules/contrib/*
-bootdrop_profile/themes/contrib/*
+profile/modules/contrib/*
+profile/themes/contrib/*
 shared/files/*
 shared/settings.local.php
 *.DS_Store

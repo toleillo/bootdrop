@@ -6,9 +6,8 @@ Bootdrop builds a new Drupal 7 installation at a "drupal" folder, links the drup
 
 Configuration
 ----------------
-1. Edit profile/bootdrop.make and comment or uncomment to include extra sets of modules.
-2. In modules/features link the bootdrop_features you need or copy them for customization changing the feature name to feature_foo instead of bootdrop_foo.
-3. Edit profile/bootdrop.info and/or profile/modules/features/feature_controller.info to enable extra sets of modules.
+1. Edit profile/bootdrop.make to include extra modules and profile/bootdrop.info to enable them as dependencies.
+2. Copy the features you need from features folder into profile/modules/features and edit profile/modules/features/feature_controller.info to enable them as dependencies.
 
 Installation
 ------------

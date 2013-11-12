@@ -1,15 +1,15 @@
 echo "Generating features.make..."
-resultfile="bootdrop_profile/features.make"
+resultfile="profile/features.make"
 echo "; Auto-generated file with includes for all features with a .make file" > $resultfile
-for file in bootdrop_profile/modules/features/*/*.make; do
+for file in profile/modules/features/*/*.make; do
   file=$(basename "$file")
   filename="${file%.make}"
   echo "includes[$filename] = \"modules/features/$filename/$file\"" >> $resultfile
 done
 
 echo "Building Bootdrop profile..."
-rm -rf bootdrop_profile/modules/contrib
-rm -rf bootdrop_profile/themes/contrib
+rm -rf profile/modules/contrib
+rm -rf profile/themes/contrib
 cd drupal
 drush make --working-copy --no-core --contrib-destination=profiles/bootdrop -y profiles/bootdrop/bootdrop.make
 cd -

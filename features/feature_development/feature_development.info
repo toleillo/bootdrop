@@ -1,9 +1,9 @@
-name = Bootdrop Development
+name = Feature Development
 description = Module dependencies and configuration for development.
 core = 7.x
-package = Bootdrop Features
+package = Base Features
 version = 7.x-1.0-dev
-project = bootdrop_development
+project = feature_development
 dependencies[] = diff
 dependencies[] = devel
 dependencies[] = views_ui

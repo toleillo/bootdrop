@@ -1,8 +1,8 @@
-name = Bootdrop Images
+name = Feature Images
 description = Module dependencies and configuration for image handling.
 core = 7.x
-package = Bootdrop Features
+package = Base Features
 version = 7.x-1.0-dev
-project = bootdrop_images
+project = feature_images
 dependencies[] = imce
 features[features_api][] = api:2
