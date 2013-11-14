@@ -4,35 +4,6 @@ description = Bootdrop Profile.
 version = VERSION
 core = 7.x
 
-; Core
-dependencies[] = block
-dependencies[] = contextual
-dependencies[] = dashboard
-dependencies[] = dblog
-dependencies[] = field_ui
-dependencies[] = file
-dependencies[] = help
-dependencies[] = image
-dependencies[] = list
-dependencies[] = menu
-dependencies[] = number
-dependencies[] = options
-dependencies[] = path
-dependencies[] = rdf
-dependencies[] = search
-dependencies[] = taxonomy
-
-; Base
-dependencies[] = ctools
-dependencies[] = features
-dependencies[] = strongarm
-dependencies[] = views
-dependencies[] = token
-dependencies[] = pathauto
-dependencies[] = context
-dependencies[] = entity
-dependencies[] = rules
-dependencies[] = nodequeue
-
 ; Features
+dependencies[] = features
 dependencies[] = feature_controller
