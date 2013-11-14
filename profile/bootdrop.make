@@ -56,6 +56,10 @@ projects[nodequeue][type] = "module"
 
 ; Themes and theming modules and libraries
 ; ----------------------------------------
-; Mothership
+; Shiny as admin theme
+projects[shiny][version] = 1.4
+projects[mothership][type] = "theme"
+
+; Mothership as custom base theme
 projects[mothership][version] = 2.10
 projects[mothership][type] = "theme"

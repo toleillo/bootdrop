@@ -5,5 +5,6 @@ package = Production Features
 version = 7.x-1.0-dev
 project = feature_production
 dependencies[] = toolbar
+dependencies[] = shortcut
 dependencies[] = feature_production_theming
 features[features_api][] = api:2

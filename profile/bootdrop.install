@@ -14,7 +14,7 @@
 function bootdrop_install() {
   // Enable themes.
   $theme_name = 'bootdropship';
-  $admin_theme = 'seven';
+  $admin_theme = 'shiny';
   theme_enable(array($admin_theme, $theme_name));
   // Set default theme.
   variable_set('theme_default', $theme_name);
@@ -22,4 +22,5 @@ function bootdrop_install() {
   variable_set('admin_theme', $admin_theme);
   // Use the administration theme when editing or creating content.
   variable_set('node_admin_theme', 1);
+  theme_disable(array('bartik'));
 }
