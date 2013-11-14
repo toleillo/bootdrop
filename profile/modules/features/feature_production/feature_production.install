@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_uninstall().
+ */
+function feature_production_uninstall() {
+  $modules = array(
+    'toolbar',
+    'feature_production_theming',
+  );
+  module_disable($modules);
+}

@@ -10,6 +10,9 @@ function feature_development_uninstall() {
     'views_ui',
     'context_ui',
     'rules_admin',
-    'feature_development_theming');
+    'admin_menu',
+    'module_filter',
+    'feature_development_theming',
+  );
   module_disable($modules);
 }
