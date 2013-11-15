@@ -1,9 +1,9 @@
 #!/bin/bash
 
 cd drupal
-drush pm-disable -y feature_production feature_production_theming
+drush pm-disable -y feature_production
+drush pm-uninstall -y feature_production
 drush pm-enable -y feature_development
 drush fra -y
 drush updatedb -y
-drush cc all
 cd -

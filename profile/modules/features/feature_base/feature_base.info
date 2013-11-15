@@ -1,0 +1,36 @@
+name = Feature Base
+description = Base core and contrib modules for the Drupal application
+core = 7.x
+package = Global Features
+version = 7.x-1.0-dev
+project = feature_base
+features[features_api][] = api:2
+; Core
+dependencies[] = block
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = dblog
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = rdf
+dependencies[] = search
+dependencies[] = taxonomy
+dependencies[] = update
+; Base
+dependencies[] = features
+dependencies[] = ctools
+dependencies[] = strongarm
+dependencies[] = views
+dependencies[] = token
+dependencies[] = pathauto
+dependencies[] = context
+dependencies[] = entity
+dependencies[] = rules
+dependencies[] = nodequeue

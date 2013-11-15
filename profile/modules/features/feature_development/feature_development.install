@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_uninstall().
+ */
+function feature_development_uninstall() {
+  $modules = array(
+    'diff',
+    'devel',
+    'views_ui',
+    'context_ui',
+    'rules_admin',
+    'admin_menu',
+    'module_filter',
+    'feature_development_theming',
+  );
+  module_disable($modules);
+}
