@@ -30,6 +30,10 @@ projects[entity][type] = "module"
 projects[entity_view_mode][version] = "1.0-rc1"
 projects[entity_view_mode][type] = "module"
 
+; Variable
+projects[variable][version] = "2.3"
+projects[variable][type] = "module"
+
 ; Rules
 projects[rules][version] = 2.6
 projects[rules][type] = "module"

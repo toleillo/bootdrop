@@ -3,7 +3,7 @@
 /**
  * Implements hook_uninstall().
  */
-function feature_production_uninstall() {
+function feature_i18n_uninstall() {
   $modules = array(
     'locale',
     'entity_translation',

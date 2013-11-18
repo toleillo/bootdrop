@@ -1,9 +1,9 @@
-name = Feature Production
-description = Module dependencies and configuration for a production environment.
+name = Feature i18n
+description = Module dependencies and configuration for multilingual.
 core = 7.x
-package = Production Features
+package = Features
 version = 7.x-1.0-dev
-project = feature_production
+project = feature_i18n
 dependencies[] = locale
 dependencies[] = entity_translation
 dependencies[] = i18n
