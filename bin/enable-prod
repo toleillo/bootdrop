@@ -6,4 +6,5 @@ drush pm-uninstall -y feature_development
 drush pm-enable -y feature_production
 drush fra -y
 drush updatedb -y
+drush cc all
 cd -
