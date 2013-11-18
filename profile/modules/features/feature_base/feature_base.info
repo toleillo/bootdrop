@@ -32,5 +32,6 @@ dependencies[] = token
 dependencies[] = pathauto
 dependencies[] = context
 dependencies[] = entity
+dependencies[] = entity_view_mode
 dependencies[] = rules
 dependencies[] = nodequeue

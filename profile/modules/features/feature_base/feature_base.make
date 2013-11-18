@@ -26,6 +26,10 @@ projects[context][type] = "module"
 projects[entity][version] = 1.2
 projects[entity][type] = "module"
 
+; Entity view_modes
+projects[entity_view_mode][version] = "1.0-rc1"
+projects[entity_view_mode][type] = "module"
+
 ; Rules
 projects[rules][version] = 2.6
 projects[rules][type] = "module"
