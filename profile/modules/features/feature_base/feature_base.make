@@ -25,6 +25,11 @@ projects[context][type] = "module"
 ; Entity API
 projects[entity][version] = 1.2
 projects[entity][type] = "module"
+projects[entity][patch][] = "https://drupal.org/files/entity-entity_access-1780646-107.patch"
+
+; Entity reference
+projects[entityreference][version] = 1.0
+projects[entityreference][type] = "module"
 
 ; Entity view_modes
 projects[entity_view_mode][version] = "1.0-rc1"

@@ -32,6 +32,7 @@ dependencies[] = token
 dependencies[] = pathauto
 dependencies[] = context
 dependencies[] = entity
+dependencies[] = entityreference
 dependencies[] = entity_view_mode
 dependencies[] = variable
 dependencies[] = rules
