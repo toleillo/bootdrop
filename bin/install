@@ -6,6 +6,7 @@ cp shared/settings.php shared/original.settings.php
 # Install site with drush, using the Bootdrop profile
 cd drupal
 drush site-install -y --account-name=admin --account-pass=password bootdrop
+drush pm-enable -y feature_controller
 cd -
 
 # Restore settings.php discarding drush modifications

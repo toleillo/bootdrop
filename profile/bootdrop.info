@@ -6,4 +6,4 @@ core = 7.x
 
 ; Features
 dependencies[] = features
-dependencies[] = feature_controller
+dependencies[] = feature_base
