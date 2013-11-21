@@ -50,3 +50,24 @@ There are some features that only should be enabled either in development or in 
 ```bash
 bin/update-prod
 ```
+
+Multilingual
+------------
+Multilingual is one of the features available (feature\_multilingual) in the features directory. To add this feature as with any other you just have to copy it in your profile/modules/features/ folder, and link it as a dependency in feature\_controller.info.
+
+Multilingual feature begins with English as the only language component and as the default language. Bootdrop provides scripts in the bin/languages folder, which help you adding and enabling new languages, and setting one by default, updating feature_multilingual.
+
+1. Add and enable a new language (e.g. Spanish):
+   ```bash
+   bin/languages/add es
+   ```
+2. Set default language (e.g. Spanish):
+   ```bash
+   bin/languages/default es
+   ```
+3. Download and update translations (this will take a while...):
+   ```bash
+   bin/languages/update
+   ```
+
+You must have feature\_multilingual installed (which include required locale and l10n\_update) before executing these commands. The scripts also use Drush Language Commands project (drush_language), auto-downloading it first in case it's necessary.
