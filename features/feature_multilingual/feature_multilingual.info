@@ -16,5 +16,4 @@ dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[language][] = en
-features[language][] = es
 features[variable][] = language_default
