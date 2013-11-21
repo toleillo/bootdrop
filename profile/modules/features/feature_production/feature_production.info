@@ -4,6 +4,7 @@ core = 7.x
 package = Production Features
 version = 7.x-1.0-dev
 project = feature_production
+dependencies[] = features
 dependencies[] = toolbar
 dependencies[] = shortcut
 dependencies[] = feature_production_theming

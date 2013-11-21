@@ -1,0 +1,8 @@
+#!/bin/bash
+# Requires feature_multilingual
+
+cd drupal
+drush l10n-update-refresh
+drush l10n-update
+drush cc all
+cd -

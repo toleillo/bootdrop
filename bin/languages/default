@@ -1,0 +1,9 @@
+#!/bin/bash
+# Requires feature_multilingual
+
+cd drupal
+# Download drush_language if is not already downloaded
+drush dl -n drush_language
+drush language-default $1
+drush fu -y feature_multilingual
+cd -
