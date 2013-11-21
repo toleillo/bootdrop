@@ -35,6 +35,10 @@ projects[entityreference][type] = "module"
 projects[entity_view_mode][version] = "1.0-rc1"
 projects[entity_view_mode][type] = "module"
 
+; Field placeholder
+projects[field_placeholder][version] = 1.0
+projects[field_placeholder][type] = "module"
+
 ; Variable
 projects[variable][version] = "2.3"
 projects[variable][type] = "module"

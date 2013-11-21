@@ -34,6 +34,7 @@ dependencies[] = context
 dependencies[] = entity
 dependencies[] = entityreference
 dependencies[] = entity_view_mode
+dependencies[] = field_placeholder
 dependencies[] = variable
 dependencies[] = rules
 dependencies[] = nodequeue
