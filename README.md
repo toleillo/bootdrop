@@ -61,10 +61,12 @@ Multilingual feature begins with English as the only language component and as t
    ```bash
    bin/languages/add es
    ```
+
 2. Set default language (e.g. Spanish):
    ```bash
    bin/languages/default es
    ```
+
 3. Download and update translations (this will take a while...):
    ```bash
    bin/languages/update
