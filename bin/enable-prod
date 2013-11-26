@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd drupal
+drush pm-enable -y feature_controller
 drush pm-disable -y feature_development
 drush pm-uninstall -y feature_development
 drush pm-enable -y feature_production
