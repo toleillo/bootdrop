@@ -3,7 +3,8 @@ projects[diff][version] = 3.2
 projects[diff][type] = "module"
 
 ; Devel
-projects[devel][version] = 1.3
+; According to @salvis in https://drupal.org/node/1375802 1.x-dev is the recommended release over 1.3
+projects[devel][version] = "1.x-dev"
 projects[devel][type] = "module"
 
 ; Administration Menu
