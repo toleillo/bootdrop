@@ -2,7 +2,7 @@ Bootdrop
 ========
 Bootdrop 8.x-dev contains scripts using drush to clone Drupal 8.x-dev and install it.
 
-Bootdrop builds a new Drupal 8 installation at a "drupal" folder and links the drupal/sites/default/files to the "shared" folder. Then you can configure and install it to start developing.
+Bootdrop builds a new Drupal 8 installation at a "drupal" folder and links the drupal/sites/default/settings.local.php to the corresponding file in the "shared" folder. Then you can configure it and install Drupal to start developing.
 
 Installation
 ------------
