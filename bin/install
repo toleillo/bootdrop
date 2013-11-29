@@ -1,16 +1,25 @@
 #!/bin/bash
 
-# Avoid modification of settings.php by copying it for later restoring
-cp shared/settings.php shared/original.settings.php
+# Create link for a new settings.php
+if [[ -e shared/settings.php ]]; then
+  rm shared/settings.php
+fi
+cp shared/default.settings.php shared/settings.php
+if [[ ! -e drupal/sites/default/settings.php ]]; then
+  ln -s ../../../shared/settings.php drupal/sites/default/settings.php
+fi
 
-# Install site with drush, using the Bootdrop profile
+# Create an empty shared/files and link it
+if [[ -e shared/files ]]; then
+  rm -rf shared/files
+fi
+mkdir shared/files
+chmod 777 shared/files
+if [[ ! -e drupal/sites/default/files ]]; then
+  ln -s ../../../shared/files drupal/sites/default/files
+fi
+
+# Install site with drush
 cd drupal
-drush site-install -y --account-name=admin --account-pass=password bootdrop
-drush pm-enable -y feature_controller
+drush site-install -y --account-name=admin --account-pass=password
 cd -
-
-# Restore settings.php discarding drush modifications
-rm -rf shared/settings.php
-mv shared/original.settings.php shared/settings.php
-
-bin/enable-dev

@@ -5,26 +5,15 @@ if [[ -e drupal ]]; then
   chmod u+w,g+w -R drupal
   rm -rf drupal
 fi
-echo "Building Drupal..."
-drush make profile/bootdrop-core.make drupal
 
-# Delete profiles and create link to Bootdrop Profile
-rm -rf drupal/profiles/*
-ln -s ../../profile drupal/profiles/bootdrop
+git clone --branch 8.x http://git.drupal.org/project/drupal.git
 
-# Create links for settings
+# Create links for settings.local.php
 if [[ ! -e shared/settings.local.php ]]; then
   cp shared/default.settings.local.php shared/settings.local.php
   echo "Edit shared/settings.local.php with your local database configuration."
 fi
-ln -s ../../../shared/settings.php drupal/sites/default/settings.php
 ln -s ../../../shared/settings.local.php drupal/sites/default/settings.local.php
 
-# Create shared/files if it doesn't exist, and link it
-if [[ ! -e shared/files ]]; then
-  mkdir shared/files
-  chmod 777 shared/files
-fi
-ln -s ../../../shared/files drupal/sites/default/files
-
-bin/build-profile
+cd drupal
+cp example.gitignore .gitignore

@@ -1,9 +1,0 @@
-name = Bootdrop
-distribution_name = Bootdrop
-description = Bootdrop Profile.
-version = VERSION
-core = 7.x
-
-; Features
-dependencies[] = features
-dependencies[] = feature_base
