@@ -7,4 +7,5 @@ project = feature_controller
 dependencies[] = features
 dependencies[] = feature_base
 dependencies[] = feature_admin_workflow
+dependencies[] = feature_taxonomy
 features[features_api][] = api:2
