@@ -6,4 +6,5 @@ version = 7.x-1.0-dev
 project = feature_controller
 dependencies[] = features
 dependencies[] = feature_base
+dependencies[] = feature_admin_workflow
 features[features_api][] = api:2

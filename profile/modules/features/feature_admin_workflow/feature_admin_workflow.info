@@ -1,0 +1,11 @@
+name = Feature Admin Workflow
+core = 7.x
+package = Base Features
+version = 7.x-1.0-dev
+project = feature_admin_workflow
+dependencies[] = views
+dependencies[] = views_bulk_operations
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = admin_workflow_content
+features_exclude[dependencies][ctools] = ctools
