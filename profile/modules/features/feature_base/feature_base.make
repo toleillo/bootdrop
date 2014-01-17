@@ -9,6 +9,7 @@ projects[strongarm][type] = "module"
 ; Views
 projects[views][version] = 3.7
 projects[views][type] = "module"
+projects[views][patch][] = "http://drupal.org/files/views-1511396-110-array_diff_recursive.patch"
 
 ; Token
 projects[token][version] = "1.5"
